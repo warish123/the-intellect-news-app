@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Intellect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="photo/The.png" alt="company logo">
+            </a>
+
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="world" onclick="onNavItemClick('world')">World</li>
+                    <li class="hover-link nav-item" id="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</li>
+                    <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover-link nav-item" id="trending" onclick="onNavItemClick('trending')">Trending</li>
+                </ul>
+            </div>
+
+            <div class="search-bar flex">
+                <input type="text" id="search-text" class="news-input" placeholder="e.g. Elon Musk">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <div id="loader" class="loader hidden"></div>
+        <div class="cards-container container" id="cards-container"></div>
+    </main>
+
+    <!-- NEWS CARD TEMPLATE -->
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img id="news-img" src="" alt="news-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title"></h3>
+                <h6 class="news-source" id="news-source"></h6>
+                <p class="news-desc" id="news-desc"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
